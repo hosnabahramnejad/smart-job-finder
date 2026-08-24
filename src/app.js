@@ -2,7 +2,11 @@ const express = require('express');
 
 const app = express();
 
-const router = require('./routes/jobs-routes.js');
+app.use(express.json());
 
-app.use('/api', router);
+const jobsrouter = require('./routes/jobs-routes.js');
+const profilerouter = require('./routes/profile-routes.js');
+
+app.use('/api', jobsrouter);
+app.use('/api', profilerouter);
 app.listen(3000);
