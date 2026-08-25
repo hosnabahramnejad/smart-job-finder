@@ -54,4 +54,4 @@ function FormatedJobs (jobs) {
     return filterJobs;
 } 
 
-module.exports = {getjobs , searchJobs};
+module.exports = {getjobs , searchJobs, FormatedJobs};

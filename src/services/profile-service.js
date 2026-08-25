@@ -32,4 +32,13 @@ function GetAllProfiles () {
      return Array.from(profiles.values());
 }
 
-module.exports = {AddProfile, GetAllProfiles};
+function findProfileByUsername(username) {
+    const key = username.toLowerCase();
+    return profiles.get(key) || null;
+}
+
+module.exports = { 
+    AddProfile, 
+    GetAllProfiles, 
+    findProfileByUsername
+};
